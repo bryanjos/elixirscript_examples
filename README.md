@@ -2,7 +2,8 @@
 Elixirscript Example Projects
 
 * Working with Web APIs
-* Using ES6 modules in Elixirscript
-* Accessing Elixirscript code from ES6 modules
-* Using with React
+  * window
+  * console
+  * Pattern Matching on JS objects
+* Interacting with ES modules
 * Code sharing/Live reload/Phoenix
