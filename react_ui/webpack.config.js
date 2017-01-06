@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  devtool: 'source-map',
   cache: true,
   entry: ['./app/tmp/app/Elixir.App.js'],
   output: {
@@ -10,11 +11,6 @@ module.exports = {
     filename: 'build.min.js'
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    }),
     new HtmlWebpackPlugin({
       template: './app/html/index.html'
     }),

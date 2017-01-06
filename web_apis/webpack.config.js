@@ -10,11 +10,6 @@ module.exports = {
     filename: 'build.min.js'
   },
   plugins: [
-    new webpack.optimize.UglifyJsPlugin({
-      compressor: {
-        warnings: false
-      }
-    }),
     new HtmlWebpackPlugin({
       template: './app/html/index.html'
     }),
