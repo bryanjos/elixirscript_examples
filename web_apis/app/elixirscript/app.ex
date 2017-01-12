@@ -4,10 +4,12 @@ defmodule App do
 
   defp inner_thoughts(%{"id" => "my_div"} = div) do
     :console.log(div.innerHTML)
+    div
   end
 
   defp inner_thoughts(%{"id" => "my_span"} = span) do
     :console.log(span.innerHTML)
+    div
   end
 
   def main() do
@@ -18,8 +20,6 @@ defmodule App do
 
     my_elements
     |> Enum.map(&inner_thoughts(&1))
-
-    my_elements
     |> Enum.each(fn(el) ->
       el.addEventListener("click", fn(event) -> :console.log(event) end, false);
     end)
