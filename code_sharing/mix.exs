@@ -11,7 +11,7 @@ defmodule CodeSharing.Mixfile do
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
       deps: deps(),
-      elixir_script: [ input: "web/static/exjs", output: "web/static/js" ]
+      elixir_script: [ input: ["web/static/exjs", "lib/shared"], output: "web/static/js/build" ]
     ]
   end
 

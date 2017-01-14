@@ -19,6 +19,6 @@ import "phoenix_html"
 // paths "./socket" or full ones "web/static/js/socket".
 
 // import socket from "./socket"
-import Main from "./app/Elixir.Main"
+import Main from "./build/app/Elixir.Main"
 
 Main.main()

@@ -9,7 +9,7 @@ defmodule App do
 
   defp inner_thoughts(%{"id" => "my_span"} = span) do
     :console.log(span.innerHTML)
-    div
+    span
   end
 
   def main() do

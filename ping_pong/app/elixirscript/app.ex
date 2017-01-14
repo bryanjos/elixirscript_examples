@@ -1,10 +1,11 @@
 defmodule App do
-  require JS
+  import JS, only: [defgen: 2, yield: 0, yield: 1]
   @on_js_load :main
 
-  def main() do
-    ping = spawn_link(Ping, :start, [])
-    pong = spawn_link(Pong, :start, [])
+  defgen main() do
+    ping = JS.yield spawn_link(Ping, :start, [])
+    pong = JS.yield spawn_link(Pong, :start, [])
+
     send(pong, {:ping, ping})
   end
 end

@@ -2,14 +2,14 @@ defmodule Ping do
   import JS, only: [defgen: 2, yield: 0, yield: 1]
 
   defgen start do
-    yield await
+    JS.yield awai
   end
 
-  defgen await do
+  defgen awai do
     receive do
       {:pong, sender} -> send sender, {:ping, self}
     end
-    yield await
+    JS.yield awai
   end
 
 end
